@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+        }
+
+        form {
+            color: #575757;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            width: 500px;
+        }
+
+        form > * {
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        form > label {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="processData.php ">
+        <label for="surename">Surename</label>
+        <input type="text" name="surename" id="surename" >
+        <label for="email">EMAIL</label>
+        <input type="email" name="email" id="email" >
+        <label for="password">PASSWORD</label>
+        <input type="password" name="password" id="password" >
+        <label for="street_address">STREET ADDRESS</label>
+        <textarea name="street_address" id="street_address"></textarea>
+        <label for="state">STATE</label>
+        <select name="state" id="STATE">
+            <option value="jawa-timur">Jawa Timur</option>
+            <option value="jawa-barat">Jawa Barat</option>
+            <option value="sumatera-barat">Sumatera Barat</option>
+            <option value="kalimantan-barat">Kalimantan Barat</option>
+        </select>
+        <input type="text" value="Indonesia" hidden>
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+            <label>Jenis Kelamin</label> <br>
+            <input type="radio" name="gender" id="laki-laki" value="laki laki">
+            <label for="laki-laki" style="font-weight: 200;">Laki Laki</label>
+            <input type="radio" id="perempuan" name="gender" value="perempuan">
+            <label for="perempuan" style="font-weight: 200;">Perempuan</label><br>
+            <label>Hobi </label> <br>
+            <input type="checkbox" name="hobi" id="berenang" value="berenang" checked>
+            <label for="berenang" style="font-weight: 200;">Berenang</label> <br>
+            <input type="checkbox" id="berlari" name="hobi" style="align-self: self-start;" value="berlari">
+            <label for="berlari" style="font-weight: 200;">Berlari</label>
+        </div>
+        <input type="submit" value="SUBMIT" style="background-color: blueviolet; color: white; padding: 10px; border: none; border-radius: 4px;">
+    </form>
+</body>
+</html>
